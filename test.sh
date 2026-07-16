@@ -10,6 +10,10 @@ printf '%s\n' 'model = "gpt-5.5"' '' '[tui]' 'animations = false' > "$config"
 
 CODEX_CONFIG_FILE="$config" "$root/install.sh" >/dev/null
 grep -q '"git-branch"' "$config"
+grep -q '"project-root"' "$config"
+grep -q '"context-window-size"' "$config"
+grep -q '"total-output-tokens"' "$config"
+grep -q '"codex-version"' "$config"
 grep -q 'animations = false' "$config"
 
 CODEX_CONFIG_FILE="$config" "$root/install.sh" >/dev/null
