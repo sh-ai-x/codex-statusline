@@ -28,11 +28,17 @@ path = Path(sys.argv[1])
 text = path.read_text()
 items = '''status_line = [
   "model-with-reasoning",
+  "project-root",
   "current-dir",
   "git-branch",
   "context-remaining",
+  "context-window-size",
+  "used-tokens",
+  "total-input-tokens",
+  "total-output-tokens",
   "five-hour-limit",
   "weekly-limit",
+  "codex-version",
   "fast-mode",
 ]
 status_line_use_colors = true'''
