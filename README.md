@@ -40,6 +40,9 @@ creates a timestamped backup first. To target another config file:
 CODEX_CONFIG_FILE=/path/to/config.toml ./install.sh
 ```
 
+The generated TOML is validated before the installer exits. If validation
+fails, the previous configuration is restored from the timestamped backup.
+
 ## Uninstall
 
 ```bash
@@ -48,6 +51,14 @@ CODEX_CONFIG_FILE=/path/to/config.toml ./install.sh
 
 Uninstall removes only the two settings managed by this project and preserves
 other values in `[tui]`.
+
+## Test
+
+Run the installer/uninstaller checks with:
+
+```bash
+./test.sh
+```
 
 ## How it works
 
